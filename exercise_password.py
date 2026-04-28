@@ -23,4 +23,17 @@ def password():
         Contraseña muy corta
         Debe contener un numero
     """
-    pass
+    contra = input()
+    if len(contra) >= 8:
+        chequeo1 = True
+    else:
+        print("Contraseña muy corta")
+        chequeo1 = False
+    if ("1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "0") in contra:
+        chequeo2 = True
+    else:
+        print("Debe contener un numero")
+        chequeo2 = False
+    if chequeo1 and chequeo2:
+        print("Contraseña valida")
+
